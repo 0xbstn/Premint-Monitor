@@ -55,13 +55,10 @@ const syncRaffles = async () => {
             let link = (allTweets.data[i].text.split('https://')[1].split('\\')[0]).split(/(\s+)/)
             // console.log(link[0])
             raffle = await getPremintPage(link[0])
-           
-        //    console.log(raffles.find(({ title }) => title) != raffle.title)
-      
-        try{
 
+        try{
         result = (raffles.find(({ title }) => title== raffle.title ))
-    
+
         }catch(e){}
             if(typeof result == 'undefined') {
               
